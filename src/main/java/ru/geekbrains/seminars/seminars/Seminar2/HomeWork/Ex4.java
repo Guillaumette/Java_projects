@@ -16,6 +16,11 @@ public class Ex4 {
         System.out.println("Validate:" + isValidSudoku(board));
     }
 
+    /**
+     * @apiNote Валидировать доску судоку
+     * @param board доска для игры в судоку, которую нужно проверить на валидность
+     * @return true или false, валидна доска или нет
+     */
     private static boolean isValidSudoku(char[][] board) {
         for(int row = 0; row < 9; row++){
             for(int col = 0;col < 8; col++){
