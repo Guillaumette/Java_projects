@@ -10,11 +10,13 @@ public class Ex1 {
         String str = "бил дебила бодибилдер данила";
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) != ' ') {
-                if (!mapCh.containsKey(str.charAt(i))) {
-                    mapCh.put(str.charAt(i), 1);
-                } else {
-                    mapCh.put(str.charAt(i), mapCh.get(str.charAt(i)) + 1);
-                }
+                mapCh.putIfAbsent(str.charAt(i),0);
+                mapCh.put(str.charAt(i),mapCh.get(str.charAt(i)) + 1);
+//                if (!mapCh.containsKey(str.charAt(i))) {
+//                    mapCh.put(str.charAt(i), 1);
+//                } else {
+//                    mapCh.put(str.charAt(i), mapCh.get(str.charAt(i)) + 1);
+//                }
             }
         }
         for (Map.Entry<Character, Integer> entry : mapCh.entrySet()) {
