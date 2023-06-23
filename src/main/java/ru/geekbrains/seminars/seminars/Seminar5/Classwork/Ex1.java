@@ -5,13 +5,21 @@ import java.util.Map;
 
 public class Ex1 {
     public static void main(String[] args) {
-        // Посчитать количество вхождений каждого символа в текст.
-        Map<Character, Integer> mapCh = new HashMap<>();
         String str = "бил дебила бодибилдер данила";
+
+        task1(str);
+    }
+
+    /**
+     * @apiNote Посчитать количество вхождений каждого символа в текст.
+     * @param str строка на вход
+     */
+    private static void task1(String str) {
+        Map<Character, Integer> mapCh = new HashMap<>();
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) != ' ') {
                 mapCh.putIfAbsent(str.charAt(i),0);
-                mapCh.put(str.charAt(i),mapCh.get(str.charAt(i)) + 1);
+                mapCh.put(str.charAt(i), mapCh.get(str.charAt(i)) + 1);
 //                if (!mapCh.containsKey(str.charAt(i))) {
 //                    mapCh.put(str.charAt(i), 1);
 //                } else {
