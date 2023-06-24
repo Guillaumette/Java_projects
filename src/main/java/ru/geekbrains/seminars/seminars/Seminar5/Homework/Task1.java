@@ -17,6 +17,11 @@ public class Task1 {
         countWords(str, targetWord);
     }
 
+    /**
+     * @apiNote Посчитать через map, сколько раз встречается слово
+     * @param str входная строка
+     * @param targetWord искомое слово
+     */
     private static void countWords(String str, String targetWord) {
         String[] arrStr = str.split(" ");
         Map<String, Integer> result = new HashMap<>();
